@@ -18,3 +18,4 @@ If you see a problem with the script or if you see something i could improve. Th
 ## Otherwise
 
 Feel free to use the script, however a thank you or acknowledgement would be nice.
+However, if you use this script to harass others, or in any way harm others ... please dont. If you wanna be an ass, write your own damn script. 
