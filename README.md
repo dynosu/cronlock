@@ -5,15 +5,20 @@ This is the initial script. Not using it anywhere yet since its not 100% done ye
 
 Flock can do most of this, but its not easy to monitor and therefor not amazing to use. 
 
+This script has been tested in bash on Ubuntu and Debian. If it works on others, great, if not ... Let me know and I will see what I can do. But no promises. 
+
 ## Issues
 
-If you see a problem with the script or if you see something i could improve. Then please create an issue and ill look into it. 
+If you see a problem with the script or if you see something i could improve. Then please create an issue and ill look into it. If you have a fix, then please submit it and I will look at it. 
 
 ## planned features
 
 * merging of check script and cronlock script. (a monitoring/icinga mode of the script to check on status of a cron)
 * examples of apply rules for icinga2 
 * improving the code somewhat. 
+
+### Maybe
+* If there is interest, I can look at including a docker container config or something. 
 
 ## License
 
