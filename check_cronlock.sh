@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# Created by Dynosu
+# created by Dynosu (https://github.com/dynosu/cronlock)
+# License: MIT (and see the last part of the README)
 #
 # cron lockfile check
 #where do we store lockfiles?

@@ -1,4 +1,6 @@
 #!/bin/bash
+# created by Dynosu (https://github.com/dynosu/cronlock)
+# License: MIT (and see the last part of the README)
 # this script is to prevent a cron from running twice, while still being able to monitor it. 
 # usage $0 script/cronname /full/path/to/script/to/execute
 
