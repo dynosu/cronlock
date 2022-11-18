@@ -15,7 +15,11 @@ If you see a problem with the script or if you see something i could improve. Th
 * examples of apply rules for icinga2 
 * improving the code somewhat. 
 
-## Otherwise
+## License
 
-Feel free to use the script, however a thank you or acknowledgement would be nice.
-However, if you use this script to harass others, or in any way harm others ... please dont. If you wanna be an ass, write your own damn script. 
+Feel free to use the script, however a thank you or acknowledgement would be nice. See the LICENSE for this. 
+
+This repository has the MIT license with the small addition of what I call: Dont be an ass. 
+
+If you use this script to harass others, or in any way harm others ... please dont. If you wanna be an ass, write your own damn script. 
+
