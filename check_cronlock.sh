@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Created by Leon de Jong
+# Created by Dynosu
 #
 # cron lockfile check
 #where do we store lockfiles?
