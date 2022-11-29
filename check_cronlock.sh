@@ -62,7 +62,7 @@ fi
 if [ -z ${OPT_FILE} ]; then
   for file in `ls ${LOCKDIR}/*.lockfile`
     do 
-      agecheck ${LOCKDIR}/${file}
+      agecheck ${file}
     done
 elif [ -f "${LOCKDIR}/${OPT_FILE}.lockfile" ]; then
    agecheck ${LOCKDIR}/${OPT_FILE}.lockfile
