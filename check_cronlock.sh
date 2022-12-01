@@ -23,7 +23,11 @@ function agecheck() {
   DATECREATED=$(date +%s -r "${1}")
   TIMESINCECREATED=$((${DATENOW}-${DATECREATED}))
   if [ "${TIMESINCECREATED}" -gt "${OPT_CRIT}" ]; then
-    CRITLIST+=$(printf "%b\n" "\n$1 has existed for longer then configured ${OPT_CRIT} seconds" )
+    if [ -n ${OPT_FILE} ]; then
+      CRITLIST+=$(printf "%b\n" "\nLockfile: ${OPT_CRIT} has existed for longer then configured ${OPT_CRIT} seconds" )
+    else
+      CRITLIST+=$(printf "%b\n" "\nLockfile: $1 has existed for longer then configured ${OPT_CRIT} seconds" )
+    fi
   fi
 }
 
@@ -70,11 +74,21 @@ fi
 
 #if critlist is empty, then its all okay
 if [ -z "${CRITLIST}" ]; then 
-  printf '%s\n' "OK: no lockfiles older then ${OPT_CRIT} seconds found"
+  if [ -n ${OPT_FILE} ]; then
+    printf '%s\n' "OK: age of lockfile ${OPT_FILE} not older then ${OPT_CRIT} seconds"
+  else
+    printf '%s\n' "OK: no lockfiles older then ${OPT_CRIT} seconds found"
+  fi
   exit 0
 #otherwise SOMETHING is broken, and exit with a crit. 
 elif [ -n "${CRITLIST}" ]; then
-  printf '%s\n' "CRIT: lockfiles found older then ${OPT_CRIT} seconds" 
-  printf '%s\n' " ${CRITLIST[*]}"
-  exit 2
+  if [ -n ${OPT_FILE} ]; then
+    printf '%s\n' "CRIT: Age of lockfile ${OPT_FILE} found older then ${OPT_CRIT} seconds" 
+    printf '%s\n' " ${CRITLIST[*]}"
+    exit 2
+  else
+    printf '%s\n' "CRIT: lockfiles found older then ${OPT_CRIT} seconds" 
+    printf '%s\n' " ${CRITLIST[*]}"
+    exit 2
+  fi
 fi
