@@ -66,9 +66,6 @@ if [ -z ${OPT_FILE} ]; then
     done
 elif [ -f "${LOCKDIR}/${OPT_FILE}.lockfile" ]; then
    agecheck ${LOCKDIR}/${OPT_FILE}.lockfile
-elif [ ! -f "${LOCKDIR}/${OPT_FILE}.lockfile" ]; then
-  printf '%s\n' "lockfile does not exist"
-  exit 1
 fi
 
 #if critlist is empty, then its all okay
